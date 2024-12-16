@@ -4,7 +4,7 @@ import { Link, Stack } from "expo-router";
 export default function Index() {
   return (
     <>
-      <Stack.Screen options={{ header: () => null }} />
+      {/* <Stack.Screen options={{ header: () => null }} /> */}
       <View style={[
         styles.container,
         {
@@ -20,6 +20,7 @@ export default function Index() {
           <Link href="/word_of_day" style={styles.link}>Word of the Day</Link>
 
           <Link href="/statistics" style={styles.link}>Statistics</Link>
+          <Link href="/test" style={styles.link}>Wordle Testing</Link>
 
         </View>
 

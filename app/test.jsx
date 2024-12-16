@@ -9,6 +9,7 @@ export default function Test() {
   const wordLength = 6;
   const guesses = 6;
   const [currentGuess, setGuess] = useState(0);
+  const [data, setData] = useState([]);
 
   // Page Startup
   useEffect(() => {
@@ -22,10 +23,8 @@ export default function Test() {
     }
 
     console.log(newData);
-    setData(newData)
+    setData(newData);
   }, []);
-
-  const [data, setData] = useState([]);
 
   const onWordleBoxTap = () => {
     textRef.current.focus();
@@ -33,6 +32,9 @@ export default function Test() {
 
   const handleWordleBoxInput = (value) => {
     let guessData = value;
+    if (guesses <= currentGuess) {
+      return;
+    }
     if (guessData.length > wordLength) {
       guessData = guessData.slice(0, wordLength - guessData.length);
     }
@@ -46,7 +48,10 @@ export default function Test() {
   };
 
   const submitAnswer = () => {
-    if(data[currentGuess].length < wordLength){
+    if (guesses <= currentGuess) {
+      return;
+    }
+    if (data[currentGuess].trim().length < wordLength) {
       return;
     }
     setGuess(currentGuess + 1);
@@ -58,41 +63,44 @@ export default function Test() {
     <View>
       <View style={{ width: 0, height: 0 }}>
         <TextInput
+          ref={textRef}
           maxLength={wordLength}
           value={guesses[currentGuess]}
-          ref={textRef}
-          onChangeText={(val) => handleWordleBoxInput(val)}
           onSubmitEditing={() => submitAnswer()}
+          onChangeText={(val) => handleWordleBoxInput(val)}
         ></TextInput>
       </View>
-      {data.map((guess) => {
-        keyNum++;
-        return (
-          <View
-            key={keyNum}
-            onTouchEnd={onWordleBoxTap}
-            style={{ flexDirection: "row" }}
-          >
-            {guess.split("").map((c) => {
-              keyNum++;
-              return(
-                <View
-                key={keyNum}
-                style={{
-                  width: "15%",
-                  aspectRatio: 1,
-                  alignContent: "center",
-                  backgroundColor: "blue",
-                  borderRadius: 15,
-                }}
-                >
-                <Text style={{ fontSize: 40, marginLeft: 17 }}>{c}</Text>
-              </View>
-              )
-            })}
-          </View>
-        );
-      })}
+      <View style={{marginHorizontal:"auto", marginTop:5}}>
+        {data.map((guess) => {
+          keyNum++;
+          return (
+            <View
+              key={keyNum}
+              onTouchEnd={onWordleBoxTap}
+              style={{ flexDirection: "row" }}
+            >
+              {guess.split("").map((c) => {
+                keyNum++;
+                return (
+                  <View
+                    key={keyNum}
+                    style={{
+                      width: "15%",
+                      aspectRatio: 1,
+                      alignContent: "center",
+                      backgroundColor: "blue",
+                      borderRadius: 15,
+                      margin: 2,
+                    }}
+                  >
+                    <Text style={{ fontSize: 40, marginLeft: 17 }}>{c}</Text>
+                  </View>
+                );
+              })}
+            </View>
+          );
+        })}
+      </View>
     </View>
   );
 }
