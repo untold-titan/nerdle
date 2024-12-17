@@ -1,0 +1,247 @@
+{
+    "Naruto4" : [
+        "Tobi",
+        "Mizu",
+        "Kiba",
+        "Kage",
+        "Neji",
+        "Haku",
+        "Baki",
+        "Leaf",
+        "Pain",
+        "Sage"
+    ],
+
+    "Naruto5" : [
+        "Shino",
+        "Choji",
+        "Gaara",
+        "Zetsu",
+        "Ramen",
+        "Iruka",
+        "Konan",
+        "Hidan",
+        "Kunai",
+        "Obito",
+        "Senju",
+        "Hyuga"
+    ],
+
+    "Naruto6" : [
+        "Chakra",
+        "Madara",
+        "Itachi",
+        "Sasuke",
+        "Naruto",
+        "Sakura",
+        "Uchiha",
+        "Kaguya",
+        "Hatake",
+        "Hinata",
+        "Minato",
+        "Kurama",
+        "Hokage",
+        "Tenten"
+    ],
+
+    "OnePiece4" : [
+        "Nami",
+        "Tony",
+        "Zoro",
+        "Sabo",
+        "Lola",
+        "Vivi",
+        "Garp",
+        "Foxy",
+        "Koby",
+        "Oars"
+    ],
+
+    "OnePiece5" : [
+        "Luffy",
+        "Sanji",
+        "Buggy",
+        "Robin",
+        "Usopp",
+        "Jinbe",
+        "Straw",
+        "Brook",
+        "Moria",
+        "Roger",
+        "Merry",
+        "Sunny"
+
+    ],
+
+    "OnePiece6" : [
+        "Laboon",
+        "Shanks",
+        "Pirate",
+        "Franky",
+        "Kizaru",
+        "Aokiji",
+        "Mihawk",
+        "Levely",
+        "Marine",
+        "Arlong"
+    ],
+
+    "Pokemom4" : [
+        "Abra",
+        "Jynx",
+        "Onix",
+        "Snom",
+        "Uxie",
+        "HoOh",
+        "Sawk",
+        "Seel",
+        "Aron",
+        "Xatu"
+    ],
+
+    "Pokemon5" : [
+        "Kubfu",
+        "Pawmi",
+        "Yanma",
+        "Lugia",
+        "Entei",
+        "Azelf",
+        "Riolu",
+        "Goomy",
+        "Shinx",
+        "Absol",
+        "Rotom",
+        "Ralts"
+    ],
+
+    "Pokemon6" : [
+        "Gengar",
+        "Mewtwo",
+        "Kyogre",
+        "Dialga",
+        "Palkia",
+        "Arceus",
+        "Piplup",
+        "Latias",
+        "Latios",
+        "Mudkip",
+        "Flygon",
+        "Luxray",
+        "Celebi",
+        "Rowlet"
+    ],
+
+    "Persona4" : [
+        "Juno",
+        "Yuko",
+        "Yumi",
+        "Haru",
+        "Fumi",
+        "Taro",
+        "Aria",
+        "Chie",
+        "Maki",
+        "Rumi"
+    ],
+
+    "Persona5" : [
+        "Ryoji",
+        "Karin",
+        "Naoto",
+        "Rival",
+        "Lucia",
+        "Horus",
+        "Nikon",
+        "Seiji",
+        "Alice"
+    ],
+
+    "Persona6" : [
+        "Makoto",
+        "Yukari",
+        "Akechi",
+        "Kaguya",
+        "Bicorn",
+        "Oberon",
+        "Jatayu",
+        "Mithra",
+        "Anubis",
+        "Hecate"
+    ],
+
+    "CyberPunk4" : [
+        "Jack",
+        "Mila",
+        "Adam",
+        "Brax",
+        "Hoon",
+        "Hawk",
+        "Judy"
+    ],
+
+    "CyberPunk5" : [
+        "Rogue",
+        "Psalm",
+        "Order",
+        "Morro",
+        "Corpo",
+        "Panam",
+        "Misty",
+        "Kerry"
+    ],
+
+    "CyberPunk6" : [
+        "Johnny",
+        "Scorch",
+        "Erebus",
+        "Chitin",
+        "Satori",
+        "Fenrir",
+        "Watson",
+        "Morgan"
+    ],
+
+    "HunterxHunter4" : [
+        "Ging",
+        "Zeno",
+        "Leol",
+        "Boro",
+        "Paku",
+        "Kite"
+    ],
+
+    "HunterxHunter5" : [
+        "Bisky",
+        "Pitou",
+        "Greed",
+        "Razor",
+        "Kakin",
+        "Balsa",
+        "Zazan",
+        "Kikyo"
+    ],
+
+    "HunterxHunter6" : [
+        "Killua",
+        "Leorio",
+        "Hisoka",
+        "Feitan",
+        "Meteor",
+        "Mobius",
+        "Ikalgo",
+        "Meruem",
+        "Illumi",
+        "Uvogin"
+    ],
+
+    "Themes" : [
+        "Naruto",
+        "One Piece",
+        "Pokemon",
+        "Persona",
+        "CyberPunk2077",
+        "Hunter X Hunter"
+    ]
+}
+
+
