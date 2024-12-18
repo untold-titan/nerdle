@@ -16,9 +16,9 @@ We used only one package in our application:
 
 Package Install Commands:
 
-To install the package you must first ensure that you have @react-navigation/native and all of the installed dependancies. The command for this is as follows:
+To install the packages you must first ensure that you have @react-navigation/native and all of the installed dependancies. The command for this is as follows:
 
-    -- npm install @react-navigation/native
+    -- npm install
 
 After @react-navigation/native is installed myou can then install the React Elements Library through the following command: 
 
