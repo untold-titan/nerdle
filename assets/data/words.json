@@ -1,5 +1,5 @@
 {
-    "Naruto4" : [
+    "Naruto4": [
         "Tobi",
         "Mizu",
         "Kiba",
@@ -11,8 +11,7 @@
         "Pain",
         "Sage"
     ],
-
-    "Naruto5" : [
+    "Naruto5": [
         "Shino",
         "Choji",
         "Gaara",
@@ -26,8 +25,7 @@
         "Senju",
         "Hyuga"
     ],
-
-    "Naruto6" : [
+    "Naruto6": [
         "Chakra",
         "Madara",
         "Itachi",
@@ -43,8 +41,7 @@
         "Hokage",
         "Tenten"
     ],
-
-    "OnePiece4" : [
+    "OnePiece4": [
         "Nami",
         "Tony",
         "Zoro",
@@ -56,8 +53,7 @@
         "Koby",
         "Oars"
     ],
-
-    "OnePiece5" : [
+    "OnePiece5": [
         "Luffy",
         "Sanji",
         "Buggy",
@@ -70,10 +66,8 @@
         "Roger",
         "Merry",
         "Sunny"
-
     ],
-
-    "OnePiece6" : [
+    "OnePiece6": [
         "Laboon",
         "Shanks",
         "Pirate",
@@ -85,8 +79,7 @@
         "Marine",
         "Arlong"
     ],
-
-    "Pokemom4" : [
+    "Pokemon4": [
         "Abra",
         "Jynx",
         "Onix",
@@ -98,8 +91,7 @@
         "Aron",
         "Xatu"
     ],
-
-    "Pokemon5" : [
+    "Pokemon5": [
         "Kubfu",
         "Pawmi",
         "Yanma",
@@ -113,8 +105,7 @@
         "Rotom",
         "Ralts"
     ],
-
-    "Pokemon6" : [
+    "Pokemon6": [
         "Gengar",
         "Mewtwo",
         "Kyogre",
@@ -130,21 +121,19 @@
         "Celebi",
         "Rowlet"
     ],
-
-    "Persona4" : [
+    "Persona4": [
         "Juno",
         "Yuko",
         "Yumi",
-        "Haru",
         "Fumi",
         "Taro",
         "Aria",
         "Chie",
         "Maki",
+        "Haru",
         "Rumi"
     ],
-
-    "Persona5" : [
+    "Persona5": [
         "Ryoji",
         "Karin",
         "Naoto",
@@ -155,8 +144,7 @@
         "Seiji",
         "Alice"
     ],
-
-    "Persona6" : [
+    "Persona6": [
         "Makoto",
         "Yukari",
         "Akechi",
@@ -168,8 +156,7 @@
         "Anubis",
         "Hecate"
     ],
-
-    "CyberPunk4" : [
+    "CyberPunk4": [
         "Jack",
         "Mila",
         "Adam",
@@ -178,8 +165,7 @@
         "Hawk",
         "Judy"
     ],
-
-    "CyberPunk5" : [
+    "CyberPunk5": [
         "Rogue",
         "Psalm",
         "Order",
@@ -189,8 +175,7 @@
         "Misty",
         "Kerry"
     ],
-
-    "CyberPunk6" : [
+    "CyberPunk6": [
         "Johnny",
         "Scorch",
         "Erebus",
@@ -200,8 +185,7 @@
         "Watson",
         "Morgan"
     ],
-
-    "HunterxHunter4" : [
+    "HunterxHunter4": [
         "Ging",
         "Zeno",
         "Leol",
@@ -209,8 +193,7 @@
         "Paku",
         "Kite"
     ],
-
-    "HunterxHunter5" : [
+    "HunterxHunter5": [
         "Bisky",
         "Pitou",
         "Greed",
@@ -220,8 +203,7 @@
         "Zazan",
         "Kikyo"
     ],
-
-    "HunterxHunter6" : [
+    "HunterxHunter6": [
         "Killua",
         "Leorio",
         "Hisoka",
@@ -233,15 +215,30 @@
         "Illumi",
         "Uvogin"
     ],
-
-    "Themes" : [
-        "Naruto",
-        "One Piece",
-        "Pokemon",
-        "Persona",
-        "CyberPunk2077",
-        "Hunter X Hunter"
+    "themes": [
+        {
+            "Name": "Naruto",
+            "Value":"Naruto"
+        },
+        {
+            "Name": "One Piece",
+            "Value":"OnePiece"
+        },
+        {
+            "Name": "Pokemon",
+            "Value":"Pokemon"
+        },
+        {
+            "Name": "Persona",
+            "Value":"Persona"
+        },
+        {
+            "Name": "Cyberpunk 2077",
+            "Value":"CyberPunk"
+        },
+        {
+            "Name": "Hunter X Hunter",
+            "Value":"HunterxHunter"
+        }
     ]
 }
-
-

@@ -1,6 +1,7 @@
-import { Text, View, StyleSheet, Button, Pressable } from "react-native";
-import { Link, Stack, useNavigation } from "expo-router";
+import { Text, View, StyleSheet, Pressable } from "react-native";
+import { Stack, useNavigation } from "expo-router";
 import { Header } from "@/components/header";
+import * as data from "@/assets/data/words.json";
 
 export default function Index() {
   const nav = useNavigation();
@@ -29,11 +30,18 @@ export default function Index() {
             style={styles.wotd}
             title="Word of the Day"
             onPress={() => {
+              var themeId = (Math.floor(Math.random() * (data.themes.length - 0 + 1) + 0))
+              var wordLength = Math.floor(Math.random() * (6 - 4 + 1) + 4)
+              if(themeId >= data.themes.length){
+                themeId = data.themes.length - 1;
+              }
+              var wordId = Math.floor(Math.random() * (data[data.themes[themeId].Value + wordLength].length))
+              console.log("Word is: " + data[data.themes[themeId].Value + wordLength][wordId].toUpperCase());
               // Pick random word from the list of words :)
               nav.navigate("wordle", {
-                word: "CHIE",
+                word: data[data.themes[themeId].Value + wordLength][wordId].toUpperCase(),
                 guesses: 6,
-                theme: "Persona 4",
+                theme: data.themes[themeId].Name,
               });
             }}
           >
@@ -43,44 +51,32 @@ export default function Index() {
               Word of the Day
             </Text>
           </Pressable>
-          <Link href="/statistics" style={styles.link}>
+          {/* TODO: Replace with pressable */}
+          {/* <Link href="/statistics" style={styles.link}>
             Statistics
-          </Link>
+          </Link> */}
           <Text
             style={{ fontSize: 25, textAlign: "center", marginVertical: 30 }}
           >
             Themes:
           </Text>
-          <Link href="/word-length" style={styles.link}>
-            Cyberpunk 2077
-          </Link>
-          <Link href="/word-length" style={styles.link}>
-            Naruto
-          </Link>
-          <Link href="/word-length" style={styles.link}>
-            One Piece
-          </Link>
-          <Link href="/word-length" style={styles.link}>
-            Persona
-          </Link>
-          <Link href="/word-length" style={styles.link}>
-            Hunter x Hunter
-          </Link>
-          <Link href="/word-length" style={styles.link}>
-            Pokemon
-          </Link>
-          {/* <Link href="/wordle" style={styles.link}>
-              Wordle Testing
-            </Link> */}
-          {/* <Button title="Test New Word" onPress={() => {
-              nav.navigate("wordle",{
-                word:"CHIE",
-                guesses: 6,
-                theme: "Persona 4"
-              })
-            }}/> */}
+          {data.themes.map((theme) => {
+            return (
+              <Pressable
+                key={theme.Value}
+                style={styles.link}
+                onPress={() => {
+                  nav.navigate("word-length", {
+                    theme: theme.Value,
+                    themeName: theme.Name
+                  });
+                }}
+              >
+                <Text style={styles.linkText}>{theme.Name}</Text>
+              </Pressable>
+            );
+          })}
         </View>
-        {/* footer */}
         <View style={{ flex: 0.5, backgroundColor: "#F7F4F3" }} />
       </View>
     </>
@@ -103,15 +99,19 @@ const styles = StyleSheet.create({
   },
   link: {
     color: "black",
-    fontWeight: "bold",
-    fontSize: 30,
     padding: 5,
     borderStyle: "solid",
     borderColor: "black",
+    textAlign: "center",
     borderWidth: 1,
     borderRadius: 20,
-    textAlign: "center",
     marginHorizontal: 40,
     marginVertical: 5,
   },
+  linkText:{
+    fontWeight: "bold",
+    textAlign: "center",
+    fontSize: 30,
+    
+  }
 });

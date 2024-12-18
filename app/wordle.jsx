@@ -1,5 +1,4 @@
 import { useRoute } from "@react-navigation/native";
-import { useNavigation } from "expo-router";
 import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { TextInput } from "react-native";
@@ -16,6 +15,7 @@ export default function Test({}) {
   const guesses = route.params.guesses ?? 6;
   const [currentGuess, setGuess] = useState(0);
   const [data, setData] = useState([]);
+  const [win, setWin] = useState(false);
 
   // Page Startup
   useEffect(() => {
@@ -37,6 +37,9 @@ export default function Test({}) {
 
   const handleWordleBoxInput = (value) => {
     let guessData = value;
+    if (win) {
+      return;
+    }
     if (guesses <= currentGuess) {
       return;
     }
@@ -63,14 +66,22 @@ export default function Test({}) {
     // Set colors of text boxes
     const guess = data[currentGuess].guess;
     var colors = [];
-    for (var i = 0; i <= word.length; i++) {
+    var correctLetters = 0;
+    for (var i = 0; i <= word.length - 1; i++) {
       if (guess.charAt(i) == word.charAt(i)) {
+        correctLetters++;
         colors.push("#33cc33");
       } else if (word.includes(guess.charAt(i))) {
         colors.push("#ffff66");
       } else {
         colors.push("#FF0000");
       }
+    }
+
+    if (correctLetters == wordLength) {
+      console.log("You Win!");
+      textRef.current.blur();
+      setWin(true);
     }
 
     // Save new data;
@@ -88,7 +99,7 @@ export default function Test({}) {
       <Stack.Screen
         options={{ headerTitle: (props) => <Header data={props} /> }}
       />
-      <View style= {{backgroundColor: "F7F4F3"}}>
+      <View style={{ backgroundColor: "F7F4F3" }}>
         <View style={{ marginTop: 25, marginBottom: 10 }}>
           <Text style={{ fontSize: 24, textAlign: "center" }}>
             The theme is: {theme}
@@ -99,6 +110,8 @@ export default function Test({}) {
             ref={textRef}
             maxLength={wordLength}
             value={guesses[currentGuess]}
+            editable={!win}
+            selectTextOnFocus={false}
             onSubmitEditing={() => submitAnswer()}
             onChangeText={(val) => handleWordleBoxInput(val)}
           ></TextInput>
@@ -136,6 +149,9 @@ export default function Test({}) {
               </View>
             );
           })}
+        </View>
+        <View style={{marginTop: 20}}>
+          {win ? <Text style={{fontSize: 40, textAlign:"center"}}>You Win!</Text> : null}
         </View>
       </View>
     </>
